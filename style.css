@@ -30,8 +30,8 @@ body {
     vertical-align: middle;
 }
 
-/* LOGIN */
-.login-container {
+/* LOGIN (FIX NAMA CLASS) */
+.login-box {
     width: 300px;
     margin: 120px auto;
     text-align: center;
@@ -40,19 +40,43 @@ body {
     border-radius: 10px;
 }
 
-/* NAVBAR */
+.login-box input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-box button {
+    padding: 10px 20px;
+    background: #00e676;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* NAVBAR (FIX FLOAT JADUL) */
 .navbar {
+    display: flex;
+    align-items: center;
     background: rgba(0,0,0,0.7);
     padding: 15px;
 }
 
 .navbar span {
-    margin: 15px;
+    margin: 0 15px;
     cursor: pointer;
 }
 
 .logout {
-    float: right;
+    margin-left: auto;
+    padding: 8px 15px;
+    border: none;
+    background: red;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* SECTION */
@@ -70,6 +94,7 @@ body {
 .products {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .product {
@@ -78,27 +103,35 @@ body {
     background: rgba(0,0,0,0.5);
     padding: 10px;
     border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
     transition: 0.3s;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 .product:hover {
     transform: scale(1.05);
 }
 
-/* POPUP */
+/* POPUP (FIX CENTER) */
 .popup {
     display: none;
     position: fixed;
     width:100%;
     height:100%;
     background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
 }
 
 .popup-content {
     background: white;
     color: black;
     padding: 20px;
-    margin: 100px auto;
     width: 300px;
     text-align: center;
     border-radius: 10px;
@@ -115,5 +148,6 @@ body {
     padding: 20px;
     border-radius: 50%;
     background: #00e676;
+    border: none;
+    cursor: pointer;
 }
-
