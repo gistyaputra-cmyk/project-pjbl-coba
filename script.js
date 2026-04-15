@@ -1,8 +1,11 @@
 function showSection(section){
-    document.getElementById("about").style.display = "none";
-    document.getElementById("market").style.display = "none";
+    let about = document.getElementById("about");
+    let market = document.getElementById("market");
+    let target = document.getElementById(section);
 
-    document.getElementById(section).style.display = "block";
+    if(about) about.style.display = "none";
+    if(market) market.style.display = "none";
+    if(target) target.style.display = "block";
 }
 
 function logout(){
@@ -14,31 +17,45 @@ function goJual(){
 }
 
 function showProduct(name){
-    document.getElementById("popup").style.display = "block";
-    document.getElementById("productName").innerText = name;
+    let popup = document.getElementById("popup");
+    let productName = document.getElementById("productName");
+
+    if(popup && productName){
+        popup.style.display = "block";
+        productName.innerText = name;
+    }
 }
 
 function closePopup(){
-    document.getElementById("popup").style.display = "none";
+    let popup = document.getElementById("popup");
+    if(popup) popup.style.display = "none";
 }
 
 function beli(){
-    document.getElementById("popup").style.display = "none";
-    document.getElementById("buyPopup").style.display = "block";
+    let popup = document.getElementById("popup");
+    let buyPopup = document.getElementById("buyPopup");
+
+    if(popup) popup.style.display = "none";
+    if(buyPopup) buyPopup.style.display = "block";
 }
 
 function closeBuy(){
-    document.getElementById("buyPopup").style.display = "none";
-
+    let buyPopup = document.getElementById("buyPopup");
+    if(buyPopup) buyPopup.style.display = "none";
 }
-    
+
 function searchProduct(){
-    let input = document.getElementById("search").value.toLowerCase();
+    let input = document.getElementById("search");
+    if(!input) return;
+
+    let keyword = input.value.toLowerCase();
     let items = document.querySelectorAll(".product");
 
     items.forEach(item => {
-        let name = item.getAttribute("data-name").toLowerCase();
-        item.style.display = name.includes(input) ? "block" : "none";
+        let name = item.getAttribute("data-name");
+        if(name){
+            item.style.display = name.toLowerCase().includes(keyword) ? "block" : "none";
+        }
     });
 }
 
@@ -46,12 +63,12 @@ function filterKategori(kategori){
     let items = document.querySelectorAll(".product");
 
     items.forEach(item => {
+        let kat = item.getAttribute("data-kategori");
+
         if(kategori === "all"){
             item.style.display = "block";
-        } else {
-            item.style.display =
-                item.getAttribute("data-kategori") === kategori
-                ? "block" : "none";
+        } else if(kat){
+            item.style.display = kat === kategori ? "block" : "none";
         }
     });
 }
