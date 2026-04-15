@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Digital Store</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-tech">
+
+<div class="tech-overlay"></div>
+
+<div class="navbar">
+    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" class="logo-small">
+
+    <span onclick="showSection('about')">Tentang Kami</span>
+    <span onclick="showSection('market')">Marketplace</span>
+    <span onclick="goJual()">Jual Barang</span>
+
+    <button class="logout" onclick="logout()">Logout</button>
+</div>
+
+<div id="content">
+
+<div id="about" class="section">
+    <h2>Tentang Kami</h2>
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600" class="banner">
+
+    <p>Digital Store adalah platform jual beli produk digital modern.</p>
+    <p>Tujuan: mempermudah transaksi digital secara cepat, aman, dan praktis.</p>
+    <p>Manfaat: akses global, efisiensi waktu, dan peluang bisnis digital.</p>
+</div>
+
+<div id="market" class="section" style="display:none;">
+    <h2>Marketplace</h2>
+
+    <div class="products">
+        <!-- 10 Produk -->
+        <div class="product" onclick="showProduct('Ebook Premium')">
+            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=300">
+            <p>Ebook Premium</p>
+        </div>
+
+        <div class="product" onclick="showProduct('Template Website')">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=300">
+            <p>Template Website</p>
+        </div>
+
+        <div class="product" onclick="showProduct('Aplikasi Kasir')">
+            <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=300">
+            <p>Aplikasi Kasir</p>
+        </div>
+
+        <div class="product" onclick="showProduct('Desain Logo')">
+            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=300">
+            <p>Desain Logo</p>
+        </div>
+
+        <div class="product" onclick="showProduct('Preset Foto')">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=300">
+            <p>Preset Foto</p>
+        </div>
+
+        <div class="product" onclick="showProduct('Video Editing Pack')">
+            <img src="https://images.unsplash.com/photo-1574717024453-3540560d5f14?w=300">
+            <p>Video Editing Pack</p>
+        </div>
+
+        <div class="product" onclick="showProduct('Script Bot')">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=300">
+            <p>Script Bot</p>
+        </div>
+
+        <div class="product" onclick="showProduct('Font Premium')">
+            <img src="https://images.unsplash.com/photo-1586717799252-bd134ad00e26?w=300">
+            <p>Font Premium</p>
+        </div>
+
+        <div class="product" onclick="showProduct('UI Kit')">
+            <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=300">
+            <p>UI Kit</p>
+        </div>
+
+        <div class="product" onclick="showProduct('Game Assets')">
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300">
+            <p>Game Assets</p>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!-- Popup -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <h3 id="productName"></h3>
+        <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=300">
+        <br><br>
+        <button onclick="beli()">Beli</button>
+        <button onclick="closePopup()">Cancel</button>
+    </div>
+</div>
+
+<div id="buyPopup" class="popup">
+    <div class="popup-content">
+        <h3>Pembayaran</h3>
+        <input type="email" placeholder="Masukkan Email">
+
+        <p>Scan QRIS:</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/QR_code_example.png" width="150">
+
+        <p>Kirim bukti ke WhatsApp: 085708829924</p>
+        <button onclick="closeBuy()">OK</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
