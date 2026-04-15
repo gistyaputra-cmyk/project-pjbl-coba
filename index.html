@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Digital Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-tech">
+
+<div class="login-container">
+    <h2>LOGIN DIGITAL STORE</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="error"></p>
+</div>
+
+<script>
+function login(){
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    if(user === "admin" && pass === "1234"){
+        window.location.href = "store.html";
+    } else {
+        document.getElementById("error").innerText = "Username atau Password salah!";
+    }
+}
+</script>
+
+</body>
+</html>
