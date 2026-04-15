@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* BACKGROUND TECH */
+.bg-tech {
+    background: linear-gradient(135deg, #0f2027, #00c853, #1b5e20);
+}
+
+/* efek grid digital */
+.tech-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(0,255,0,0.2) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+}
+
+/* LOGO */
+.logo {
+    width: 80px;
+}
+
+.logo-small {
+    width: 40px;
+    vertical-align: middle;
+}
+
+/* LOGIN */
+.login-container {
+    width: 300px;
+    margin: 120px auto;
+    text-align: center;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(0,0,0,0.7);
+    padding: 15px;
+}
+
+.navbar span {
+    margin: 15px;
+    cursor: pointer;
+}
+
+.logout {
+    float: right;
+}
+
+/* SECTION */
+.section {
+    padding: 20px;
+}
+
+/* BANNER */
+.banner {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* PRODUCTS */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 150px;
+    margin: 10px;
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+/* POPUP */
+.popup {
+    display: none;
+    position: fixed;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.8);
+}
+
+.popup-content {
+    background: white;
+    color: black;
+    padding: 20px;
+    margin: 100px auto;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* HALAMAN JUAL */
+.jual-container {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.plus-btn {
+    font-size: 40px;
+    padding: 20px;
+    border-radius: 50%;
+    background: #00e676;
+}
