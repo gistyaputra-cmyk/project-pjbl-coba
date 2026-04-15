@@ -116,3 +116,20 @@ body {
     border-radius: 50%;
     background: #00e676;
 }
+
+#search {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+}
+
+.kategori button {
+    margin: 5px;
+    padding: 8px 15px;
+    background: #00c853;
+    border: none;
+    border-radius: 20px;
+    color: white;
+}
