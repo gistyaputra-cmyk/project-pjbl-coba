@@ -29,4 +29,29 @@ function beli(){
 
 function closeBuy(){
     document.getElementById("buyPopup").style.display = "none";
+
+}
+    
+function searchProduct(){
+    let input = document.getElementById("search").value.toLowerCase();
+    let items = document.querySelectorAll(".product");
+
+    items.forEach(item => {
+        let name = item.getAttribute("data-name").toLowerCase();
+        item.style.display = name.includes(input) ? "block" : "none";
+    });
+}
+
+function filterKategori(kategori){
+    let items = document.querySelectorAll(".product");
+
+    items.forEach(item => {
+        if(kategori === "all"){
+            item.style.display = "block";
+        } else {
+            item.style.display =
+                item.getAttribute("data-kategori") === kategori
+                ? "block" : "none";
+        }
+    });
 }
