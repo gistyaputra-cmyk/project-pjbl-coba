@@ -2,6 +2,7 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Digital Store</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -34,63 +35,64 @@
     <h2>Marketplace</h2>
 
     <div class="products">
-        <!-- 10 Produk -->
-        <div class="product" onclick="showProduct('Ebook Premium')">
+
+        <div class="product" data-name="Ebook Premium" data-kategori="ebook" onclick="showProduct('Ebook Premium')">
             <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=300">
             <p>Ebook Premium</p>
         </div>
 
-        <div class="product" onclick="showProduct('Template Website')">
+        <div class="product" data-name="Template Website" data-kategori="design" onclick="showProduct('Template Website')">
             <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=300">
             <p>Template Website</p>
         </div>
 
-        <div class="product" onclick="showProduct('Aplikasi Kasir')">
+        <div class="product" data-name="Aplikasi Kasir" data-kategori="app" onclick="showProduct('Aplikasi Kasir')">
             <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=300">
             <p>Aplikasi Kasir</p>
         </div>
 
-        <div class="product" onclick="showProduct('Desain Logo')">
+        <div class="product" data-name="Desain Logo" data-kategori="design" onclick="showProduct('Desain Logo')">
             <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=300">
             <p>Desain Logo</p>
         </div>
 
-        <div class="product" onclick="showProduct('Preset Foto')">
+        <div class="product" data-name="Preset Foto" data-kategori="design" onclick="showProduct('Preset Foto')">
             <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=300">
             <p>Preset Foto</p>
         </div>
 
-        <div class="product" onclick="showProduct('Video Editing Pack')">
+        <div class="product" data-name="Video Editing Pack" data-kategori="design" onclick="showProduct('Video Editing Pack')">
             <img src="https://images.unsplash.com/photo-1574717024453-3540560d5f14?w=300">
             <p>Video Editing Pack</p>
         </div>
 
-        <div class="product" onclick="showProduct('Script Bot')">
+        <div class="product" data-name="Script Bot" data-kategori="app" onclick="showProduct('Script Bot')">
             <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=300">
             <p>Script Bot</p>
         </div>
 
-        <div class="product" onclick="showProduct('Font Premium')">
+        <div class="product" data-name="Font Premium" data-kategori="design" onclick="showProduct('Font Premium')">
             <img src="https://images.unsplash.com/photo-1586717799252-bd134ad00e26?w=300">
             <p>Font Premium</p>
         </div>
 
-        <div class="product" onclick="showProduct('UI Kit')">
+        <div class="product" data-name="UI Kit" data-kategori="design" onclick="showProduct('UI Kit')">
             <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=300">
             <p>UI Kit</p>
         </div>
 
-        <div class="product" onclick="showProduct('Game Assets')">
+        <div class="product" data-name="Game Assets" data-kategori="design" onclick="showProduct('Game Assets')">
             <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300">
             <p>Game Assets</p>
         </div>
+
     </div>
 </div>
 
 </div>
 
-<!-- Popup -->
-<div id="popup" class="popup">
+<!-- Popup Produk -->
+<div id="popup" class="popup" style="display:none;">
     <div class="popup-content">
         <h3 id="productName"></h3>
         <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=300">
@@ -100,7 +102,8 @@
     </div>
 </div>
 
-<div id="buyPopup" class="popup">
+<!-- Popup Pembelian -->
+<div id="buyPopup" class="popup" style="display:none;">
     <div class="popup-content">
         <h3>Pembayaran</h3>
         <input type="email" placeholder="Masukkan Email">
