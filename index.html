@@ -7,6 +7,16 @@
 </head>
 <body class="bg-tech">
 
+<!-- LOGIN -->
+<div id="loginBox" class="login-box">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="error" style="color:red;"></p>
+</div>
+
+<!-- MARKET -->
 <div id="market" class="section" style="display:none;">
     <h2>Marketplace</h2>
 
@@ -21,6 +31,7 @@
         <button onclick="filterKategori('app')">Aplikasi</button>
     </div>
 
+    <!-- PRODUK -->
     <div class="products">
 
         <div class="product" data-name="Ebook Premium" data-kategori="ebook" onclick="showProduct('Ebook Premium')">
@@ -86,17 +97,25 @@
     </div>
 </div>
 
+<script src="script.js"></script>
+
 <script>
 function login(){
     let user = document.getElementById("username").value;
     let pass = document.getElementById("password").value;
 
     if(user === "admin" && pass === "1234"){
-        window.location.href = "store.html";
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("market").style.display = "block";
     } else {
         document.getElementById("error").innerText = "Username atau Password salah!";
     }
 }
+
+/* BIAR GAK ERROR KALAU script.js BELUM ADA */
+function searchProduct(){}
+function filterKategori(){}
+function showProduct(){}
 </script>
 
 </body>
